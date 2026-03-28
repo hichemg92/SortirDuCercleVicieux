@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>الخروج من الحلقة المفرغة – جلسة فردية 2 ساعات | HG Mental Coaching</title>
+  <meta name="description" content="جلسة 1:1 عبر Zoom لمدة ساعتين لكسر الأنماط المتكررة ووضع بدائل عملية. اختر الدفع حسب مكان إقامتك." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-page: #f8fafc;
+      --bg-card: #ffffff;
+      --bg-soft: #f1f5f9;
+      --text: #0f172a;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --accent: #0d9488;
+      --accent-soft: #ccfbf1;
+      --cta-orange: #ea580c;
+      --cta-orange-hover: #c2410c;
+      --cta-green: #059669;
+      --cta-green-hover: #047857;
+      --font-body: 'Cairo', sans-serif;
+      --radius: 12px;
+      --radius-sm: 8px;
+      --shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+      --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-body);
+      font-size: 1rem;
+      background: var(--bg-page);
+      color: var(--text);
+      line-height: 1.75;
+      min-height: 100vh;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .bg-gradient {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 60vh;
+      background: linear-gradient(180deg, #ccfbf1 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 3rem 0 2rem;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 0.4rem 1rem;
+      border-radius: 999px;
+      margin-bottom: 1.5rem;
+      border: 1px solid #99f6e4;
+      letter-spacing: 0.02em;
+    }
+
+    .hero h1 {
+      font-family: var(--font-body);
+      font-size: clamp(2rem, 5.5vw, 2.75rem);
+      font-weight: 800;
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+      color: var(--text);
+      letter-spacing: -0.02em;
+    }
+
+    .hero .tagline {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      max-width: 36ch;
+      margin: 0 auto;
+    }
+
+    .section {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem 1.5rem;
+      margin-bottom: 1.25rem;
+      box-shadow: var(--shadow);
+    }
+
+    .section h2 {
+      font-family: var(--font-body);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.01em;
+    }
+
+    .section p {
+      color: var(--text-muted);
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .section p:last-child { margin-bottom: 0; }
+    .section strong { color: var(--text); }
+
+    .section-highlight {
+      border-color: #99f6e4;
+      background: var(--accent-soft);
+    }
+
+    .hook-text {
+      font-family: var(--font-body);
+      font-size: 1.2rem;
+      line-height: 1.7;
+      color: var(--text);
+      margin-bottom: 0.75rem;
+      font-weight: 600;
+    }
+
+    .hook-sub {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      margin-bottom: 0;
+    }
+
+    .teaser-intro { margin-bottom: 0.75rem; }
+
+    .teaser-list {
+      list-style: none;
+      margin: 0 0 1rem 0;
+      padding: 0;
+    }
+
+    .teaser-list li {
+      position: relative;
+      padding: 0.4rem 0 0.4rem 1.5rem;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .blockquote {
+      font-family: var(--font-body);
+      font-size: 1.05rem;
+      line-height: 1.75;
+      color: var(--text-muted);
+      border-right: 4px solid var(--accent);
+      padding: 1rem 1.25rem 1rem 0;
+      margin: 0;
+      background: var(--accent-soft);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    }
+
+    .hero-image-wrap {
+      text-align: center;
+      margin: 1.5rem 0 2rem;
+    }
+
+    .hero-image-wrap img {
+      max-width: 280px;
+      width: 100%;
+      height: auto;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--border);
+    }
+
+    .hero-image-wrap .img-placeholder {
+      max-width: 280px;
+      margin: 0 auto;
+      aspect-ratio: 16/10;
+      background: var(--bg-soft);
+      border: 2px dashed #cbd5e1;
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    .choice-heading {
+      text-align: center;
+      font-family: var(--font-body);
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 1.5rem;
+      padding-top: 0.5rem;
+    }
+
+    .payment-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+      margin-bottom: 1rem;
+    }
+
+    @media (max-width: 560px) {
+      .payment-cards { grid-template-columns: 1fr; }
+    }
+
+    .payment-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.75rem 1.25rem;
+      text-align: center;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      box-shadow: var(--shadow);
+    }
+
+    .payment-card:hover {
+      border-color: #cbd5e1;
+      box-shadow: var(--shadow-md);
+    }
+
+    .payment-card.tunisia { border-top: 4px solid var(--cta-orange); }
+    .payment-card.international { border-top: 4px solid var(--cta-green); }
+
+    .payment-card .label {
+      display: inline-block;
+      font-size: 1.05rem;
+      font-weight: 800;
+      line-height: 1.3;
+      color: var(--text);
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 9999px;
+      padding: 0.35rem 0.8rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .payment-card.tunisia .label { color: var(--cta-orange); }
+    .payment-card.international .label { color: var(--cta-green); }
+
+    .payment-card .title {
+      font-family: var(--font-body);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 0.35rem;
+    }
+
+    .payment-card .desc {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+      line-height: 1.5;
+    }
+
+    .payment-card .price {
+      display: inline-block;
+      font-size: 1.35rem;
+      font-weight: 900;
+      letter-spacing: 0.02em;
+      color: var(--text);
+      background: #f8fafc;
+      border: 2px solid #e2e8f0;
+      border-radius: 0.75rem;
+      padding: 0.45rem 0.85rem;
+      box-shadow: 0 6px 14px rgba(15, 23, 42, 0.08);
+      margin-bottom: 1rem;
+    }
+
+    .payment-card.tunisia .price {
+      color: #9a3412;
+      border-color: #fdba74;
+      background: #fff7ed;
+      white-space: nowrap;
+    }
+
+    .payment-card .price .old-price {
+      color: #dc2626;
+      text-decoration: line-through;
+      text-decoration-thickness: 2px;
+      margin-inline-end: 0.45rem;
+    }
+
+    .payment-card .price .new-price {
+      color: #9a3412;
+      font-weight: 900;
+    }
+
+    .payment-card.international .price {
+      color: #065f46;
+      border-color: #86efac;
+      background: #f0fdf4;
+      white-space: nowrap;
+    }
+
+    .btn-payment {
+      display: block;
+      width: 100%;
+      padding: 0.9rem 1.25rem;
+      border-radius: var(--radius-sm);
+      font-family: var(--font-body);
+      font-size: 1rem;
+      font-weight: 700;
+      text-align: center;
+      text-decoration: none;
+      transition: transform 0.15s, box-shadow 0.15s;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-payment.tunisia {
+      background: var(--cta-orange);
+      color: #fff;
+      box-shadow: 0 2px 8px rgba(234, 88, 12, 0.3);
+    }
+
+    .btn-payment.tunisia:hover {
+      background: var(--cta-orange-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(234, 88, 12, 0.35);
+    }
+
+    .btn-payment.international {
+      background: var(--cta-green);
+      color: #fff;
+      box-shadow: 0 2px 8px rgba(5, 150, 105, 0.25);
+    }
+
+    .btn-payment.international:hover {
+      background: var(--cta-green-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(5, 150, 105, 0.35);
+    }
+
+    .btn-payment:active { transform: translateY(0); }
+
+    .payment-actions {
+      display: grid;
+      gap: 0.65rem;
+    }
+
+    .btn-payment.instagram {
+      background: var(--cta-green);
+      color: #fff;
+      box-shadow: 0 2px 8px rgba(5, 150, 105, 0.25);
+    }
+
+    .btn-payment.instagram:hover {
+      background: var(--cta-green-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(5, 150, 105, 0.35);
+    }
+
+    .payment-note {
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-top: 1rem;
+    }
+
+    .payment-note a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .payment-note a:hover { text-decoration: underline; }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border);
+      margin-top: 1rem;
+    }
+
+    @media (max-width: 480px) {
+      .container { padding: 1.5rem 1rem 3rem; }
+      .hero { padding: 2rem 0 1.5rem; }
+      .payment-card { padding: 1.5rem 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-gradient"></div>
+  <div class="container">
+    <header class="hero">
+      <span class="hero-badge">جلسة فردية 1:1</span>
+      <h1>الخروج من الحلقة المفرغة</h1>
+      <p class="tagline">من الدوامة إلى خريطة: أين تتوقف وأين تبدأ التغيير</p>
+      <div class="hero-image-wrap">
+        <img src="photo-sortir-cercle-vicieux.png" alt="صورة الجلسة – الخروج من الحلقة المفرغة HG Mental Coaching" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+        <div class="img-placeholder" style="display: none;">صورة الجلسة</div>
+      </div>
+    </header>
+
+    <section class="section section-highlight">
+      <p class="hook-text">«حين تعود نفس القصة، السؤال ليس «لماذا أنا ضعيف؟» بل <strong>أين ينقطع الوعي في الدائرة؟</strong> من هنا نرسم <strong>خريطة بسيطة</strong>: أين تتوقف، وأين تبدأ خطوة التغيير.»</p>
+      <p class="hook-sub">جلسة واحدة مدتها 2 ساعات عبر Zoom، مخصّصة لك وحدك. نخرج منها بخطة واضحة: ماذا تراقب، وماذا تفعل بدلاً من ذلك عند أول إشارة.</p>
+    </section>
+
+    <section class="section">
+      <h2>ما هي الحلقة المفرغة؟</h2>
+      <p>هي نمط يتكرر فتشعر أنك في <strong>دوامة</strong> لا تتقدّم: محفّز، شعور أو فكرة، سلوك، نتيجة، ثم يعود نفس الشعور أو نفس المشهد من جديد. في هذه الجلسة لا نكتفي بوصف التكرار؛ نحوّله إلى <strong>خريطة</strong> نقرأها معاً: أين تدور الدائرة ضدك، <strong>أين يمكنك التوقف</strong>، وأين تبدأ خطوة بديلة بخيارات أكثر <strong>وعياً وانسجاماً مع قيمك</strong>.</p>
+    </section>
+
+    <section class="section">
+      <h2>لمن هذه الجلسة؟</h2>
+      <p>من يشعر أنه <strong>يعيد نفس المشهد</strong> رغم المحاولة، أو أنه عالق بين العزم والتراجع من دون أن يرى <strong>أين تدور الدائرة</strong> وما يغذي التكرار؛ أو من يريد <strong>خطة واضحة</strong> تتجاوز «المزيد من الإرادة»: ماذا يراقب، وأين يتوقف، وماذا يفعل <strong>بدلاً من ذلك</strong> عند أول إشارة، ليتقدّم باتجاه جديد <strong>بوعي</strong> وبما ينسجم مع قيمه.</p>
+    </section>
+
+    <section class="section">
+      <h2>ماذا تتضمن الجلسة؟</h2>
+      <p class="teaser-intro">هذه جلسة فردية مخصصة مدتها <strong>2 ساعات</strong> عبر Zoom. نحوّل التكرار الذي تشعره ك<strong>دوامة</strong> إلى <strong>خريطة</strong> يمكن قراءتها: أين تدور <strong>الدائرة</strong>، ما يغذيها دون وعي، ثم <strong>أين تتوقف</strong> وكيف تختار سلوكاً بديلاً وخطة متابعة تناسبك.</p>
+      <p class="teaser-intro">خلال الجلسة:</p>
+      <ul class="teaser-list">
+        <li>— رسم مسار التكرار: أين يبدأ، متى يعود، وما الذي يربط المشاهد ببعضها</li>
+        <li>— فهم الأفكار والمشاعر التي تغذي الدائرة دون أن تلاحظها</li>
+        <li>— تحديد لحظة أو موضع ينقطع فيه الوعي، وأين يمكنك التوقف أو تغيير الرد</li>
+        <li>— بناء سلوك بديل بسيط وواقعي ينسجم مع قيمك</li>
+        <li>— خطة عند الضعف أو عند أول إشارة عودة: كيف تعود إلى مسارك</li>
+        <li>— خطوات للأيام القادمة: ماذا تراقب، وماذا تفعل بدلاً من العادة القديمة</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>كلمة من المدرب</h2>
+      <blockquote class="blockquote">
+        «التغيير لا يبدأ حين تكره نفسك على التوقف، يبدأ حين تفهم لماذا تعود. الوعي هو أول شرخ في الحلقة.»
+      </blockquote>
+    </section>
+
+    <section class="section">
+      <h2>اختر طريقة الدفع حسب مكان إقامتك</h2>
+      <p class="choice-heading">أين أنت؟</p>
+
+      <div class="payment-cards">
+        <div class="payment-card tunisia">
+          <p class="label">دفع من تونس</p>
+          <p class="desc">يرجى التواصل معي عبر إنستغرام لتحديد موعد الجلسة، ثم إتمام عملية الدفع مباشرة بعد تأكيد الحجز.</p>
+          <p class="price" id="price-tunisia"><span class="new-price">79 دينار</span> 👉 <span class="old-price">119 دينار</span></p>
+          <a href="#" id="btn-tunisia" class="btn-payment tunisia">اضغط هنا وتواصل معي على إنستغرام لحجز جلسة</a>
+        </div>
+
+        <div class="payment-card international">
+          <p class="label">دفع من خارج تونس</p>
+          <p class="desc">يرجى التواصل معي عبر إنستغرام لتحديد موعد الجلسة، ثم ادفع ببطاقتك الدولية (Visa, Mastercard…) عبر Podia،</p>
+          <p class="price" id="price-international"><span class="new-price" dir="ltr">49 €</span> 👉 <span class="old-price" dir="ltr">69 €</span></p>
+          <div class="payment-actions">
+            <a href="#" id="btn-international-instagram" class="btn-payment instagram">اضغط هنا وتواصل معي على إنستغرام لحجز جلسة</a>
+            <a href="#" id="btn-international" class="btn-payment international">ثم ادفع عبر Podia</a>
+          </div>
+        </div>
+      </div>
+
+      <p class="payment-note">الدفع آمن. يرجى التواصل معي عبر إنستغرام أولاً لتأكيد موعد الجلسة.</p>
+    </section>
+
+    <footer>
+      <p>الخروج من الحلقة المفرغة، جلسة 1:1 | HG Mental Coaching</p>
+    </footer>
+  </div>
+
+  <script>
+    // نفس هيكل صفحة تحليل الشخصية، أسعار منتج ادماج عادات جديدة
+
+    var URL_TUNISIA = 'https://www.instagram.com/hg_mental_coaching/';
+    var URL_INSTAGRAM = 'https://www.instagram.com/hg_mental_coaching/';
+
+    // صفحة المنتج على Podia (المقيمون خارج تونس)، الخروج من الحلقة المفرغة
+    var URL_PODIA = 'https://hichamgouia.podia.com/3140d554-edf0-4897-9516-aa5c75563a3a';
+
+    var PRIX_TUNISIA = '<span class="new-price">79 دينار</span> 👉 <span class="old-price">119 دينار</span>';
+    var PRIX_INTERNATIONAL = '<span class="new-price" dir="ltr">49 €</span> 👉 <span class="old-price" dir="ltr">69 €</span>';
+
+    document.getElementById('btn-tunisia').href = URL_TUNISIA;
+    document.getElementById('btn-international-instagram').href = URL_INSTAGRAM;
+    document.getElementById('btn-international').href = URL_PODIA;
+    document.getElementById('price-tunisia').innerHTML = PRIX_TUNISIA;
+    document.getElementById('price-international').innerHTML = PRIX_INTERNATIONAL;
+  </script>
+</body>
+</html>
